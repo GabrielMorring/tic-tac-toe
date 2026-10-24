@@ -1,5 +1,9 @@
-puts "hi"
+require_relative "lib/game"
 
-def hi
-  puts "hi"
+loop do
+  puts "\nPlay game? (y/n)"
+  break if gets.chomp == "n"
+
+  game = Game.new
+  game.play
 end
